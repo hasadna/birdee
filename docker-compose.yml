@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  app:
+    build:
+      context: .
+    image: hasadna/birdee:latest
+    ports:
+      - '127.0.0.1:8080:8080'
+    depends_on:
+      - db
+    restart: always
+  db:
+    image: postgres:alpine
+    environment:
+      - POSTGRES_USER=birdee
+      - POSTGRES_PASSWORD=birdee
+      - POSTGRES_DB=birdee
+    restart: always

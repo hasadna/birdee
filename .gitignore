@@ -1,0 +1,10 @@
+.idea
+.venv
+*.sqlite3
+
+*.env
+!*-example.env
+local_settings.py
+__pycache__
+bower_components
+static_collected

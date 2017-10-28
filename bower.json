@@ -1,0 +1,24 @@
+{
+  "name": "birdee",
+  "authors": [
+    "Yehuda Deutsch <yeh@uda.co.il>"
+  ],
+  "description": "Notification center",
+  "main": "",
+  "keywords": [
+    "Hasadna",
+    "Notifications",
+    "RSS"
+  ],
+  "license": "Apache 2.0",
+  "homepage": "",
+  "dependencies": {
+    "admin-lte": "^2.4.2",
+    "font-awesome": "^4.7.0",
+    "Ionicons": "ionicons#^2.0.1",
+    "jquery": "^3.2.1"
+  },
+  "resolutions": {
+    "jquery": ">=1.10"
+  }
+}

@@ -1,0 +1,27 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+django = "*"ake
+django-bower = "*"
+django-avatar = "*"
+"psycopg2" = "*"
+social-auth-app-django = "*"
+raven = "*"
+djaccount = "*"
+Twisted = "*"
+
+
+[requires]
+
+python_version = "3.6"
+

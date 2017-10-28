@@ -1,0 +1,6 @@
+.idea
+.venv
+bower_components
+static_collected
+
+*.sqlite3
