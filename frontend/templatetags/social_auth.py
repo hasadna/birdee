@@ -33,7 +33,7 @@ social_buttons = {
 
 
 def has_social_key(network):
-    network_key = f'SOCIAL_AUTH_{network}_key'.replace('-', '_').upper()
+    network_key = f'SOCIAL_AUTH_{network}_KEY'.replace('-', '_').upper()
     return getattr(settings, network_key, None)
 
 
