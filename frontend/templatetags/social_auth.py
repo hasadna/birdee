@@ -34,7 +34,7 @@ social_buttons = {
 
 def has_social_key(network):
     network_key = f'SOCIAL_AUTH_{network}_key'.replace('-', '_').upper()
-    return hasattr(settings, network_key)
+    return getattr(settings, network_key, None)
 
 
 @register.assignment_tag()
