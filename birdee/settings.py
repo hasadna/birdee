@@ -22,6 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
+# Set this to True to allow accessing /admin/ web interface
+ADMIN_ENABLED = False
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # For development set this to True in local_settings.py
 DEBUG = False
@@ -36,7 +39,6 @@ LOGOUT_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -171,3 +173,8 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+if ADMIN_ENABLED:
+    INSTALLED_APPS = [
+        'django.contrib.admin',
+    ] + INSTALLED_APPS

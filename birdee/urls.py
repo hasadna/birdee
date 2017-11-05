@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls import url, include
-from django.contrib import admin
 from django.views.static import serve
 
 from frontend.views import MainView, AccountRegisterView
@@ -28,6 +27,12 @@ urlpatterns = [
     url(r'^account/', include('account.urls', namespace='account')),
     url(r'^account/register/$', AccountRegisterView.as_view(), name='account-register'),
 
-    url(r'^admin/', admin.site.urls),
     url(r'^static/(?P<path>.*)$', serve, name='static', kwargs={'document_root': settings.STATIC_ROOT}),
 ]
+
+if settings.ADMIN_ENABLED:
+    from django.contrib import admin
+
+    urlpatterns += [
+        url(r'^admin/', admin.site.urls),
+    ]
