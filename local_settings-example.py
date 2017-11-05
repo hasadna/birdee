@@ -1,9 +1,13 @@
 # Django
 
-# Enable Django's builtin admin interface
+# SECRET_KEY=
 ADMIN_ENABLED = True
 DEBUG = True
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+# See: https://github.com/kennethreitz/dj-database-url for references
+# import dj_database_url
+# DATABASES = {'default': dj_database_url.config(conn_max_age=600, default='postgres://birdee:birdee@127.0.0.1/birdee')}
 
 # SocialAuth general
 SOCIAL_AUTH_REDIRECT_IS_HTTPS = False

@@ -18,7 +18,8 @@ django-avatar = "*"
 social-auth-app-django = "*"
 raven = "*"
 djaccount = "*"
-Twisted = "*"
+twisted = "*"
+dj-database-url = "*"
 
 
 [requires]
